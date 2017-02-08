@@ -29,9 +29,9 @@ def populate():
 		{"title":"Flask",
 		 "url":"http://flask.pocoo.org"} ]
 
-	cats = {"Python": {"pages": python_pages},
-	"Django": {"pages": django_pages},
-	"Other Frameworks": {"pages": other_pages} }
+	cats = {"Python": {"pages": python_pages, "views": 128, "likes": 64},
+			"Django": {"pages": django_pages, "views": 64, "likes": 32},
+        	"Other Frameworks": {"pages": other_pages, "views": 32, "likes": 16},
 
 		 
 	for cat, cat_data in cats.items():
@@ -52,6 +52,8 @@ def add_page(cat, title, url, views=0):
 
 def add_cat(name):
 	c=Category.objects.get_or_create(name=name)[0]
+	c.views=views
+	c.likes=likes
 	c.save()
 	return c
 	
