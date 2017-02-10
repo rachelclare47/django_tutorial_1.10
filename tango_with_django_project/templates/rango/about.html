@@ -1,10 +1,13 @@
-{% extends 'rango/base.html' %}
+<!DOCTYPE html>
+
 {% load staticfiles %}
-	{% block title_block %}
-		About
-	{% endblock %}
-	
-	{% block body_block %}
+<html>
+
+	<head>
+		<title>Rango</title>
+	</head>
+
+	<body>
 		<h1> This tutorial has been put together by Rachel O'Donnell</h1>
 		<h1>Rango says...</h1>
 		<div>
@@ -19,4 +22,6 @@
 			<img src="{% static "images/cat.jpg" %}"
 				alt="Picture of a kitten" /> 
 		</div>
-	{% endblock %}
+	</body>
+
+</html>
