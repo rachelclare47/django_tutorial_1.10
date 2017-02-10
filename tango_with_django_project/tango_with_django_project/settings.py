@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 INSTALLED_APPS = [
 'django.contrib.admin',
